@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Akshay Tambe · AI automation, Mumbai</title>
+  <meta name="description" content="I build AI agents and automations for small businesses, starting with the ones I run. Ten years in sales and operations before that.">
+  <meta property="og:title" content="Akshay Tambe · AI automation">
+  <meta property="og:description" content="AI agents and automations for small businesses, built by someone who has done the sales and operations work they replace.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+  <header class="intro">
+    <h1>Akshay Tambe</h1>
+    <p class="where">Mumbai. Looking for AI automation and solutions roles, on-site or remote.</p>
+
+    <p>I build AI agents and automations for small businesses. Most of them start as fixes for problems in businesses I run: a listing-photo studio, a biryani kitchen in Andheri West, and an alarm app.</p>
+
+    <p>Before that I spent about ten years in sales, customer service and operations, in Mumbai and in Dublin. I've looked after sixty client accounts while cold-calling for new ones, and keyed patient records into a CRM during COVID contact tracing, so I have a fair idea which parts of that work a machine should be doing.</p>
+  </header>
+
+  <section id="work">
+    <h2>Things I've built</h2>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>A sales agent for PixelPolish</h3>
+        <span class="year">2026</span>
+      </div>
+      <p>PixelPolish edits listing photos for hotels and Airbnb hosts. Finding clients used to mean looking up each business, judging their photos and writing to them one by one. This script does the first pass: it reads a prospect's website, runs a couple of searches, and has an LLM score the fit and draft an email that only uses facts it actually found. If the search results turn out to be about some other business, it skips that one. I read every draft before it goes out.</p>
+      <figure class="artifact">
+        <figcaption>From a real run, outputs/outreach-20261117.md</figcaption>
+<pre>Abode Bombay — fit 9/10
+
+Subject: Photo editing for Abode Bombay's room listings
+
+I came across your 25-room boutique hotel in Colaba, housed in a heritage property from 1910. With room types ranging from suites to basic rooms, clear and consistent listing photos can help guests compare and book with confidence.</pre>
+      </figure>
+      <p class="meta">Python, OpenRouter, Pydantic, DuckDuckGo search, BeautifulSoup. Runs on free or very cheap models, one model call per business.</p>
+      <p class="links"><a href="https://github.com/At0591/ai-portfolio/tree/main/01-ai-sales-agent">Code on GitHub</a> · <a href="https://www.pixelpolish.art">pixelpolish.art</a></p>
+    </article>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>Dum Biryani Rasoi website</h3>
+        <span class="year">2026</span>
+      </div>
+      <p>The site for my cloud kitchen in Four Bungalows. The old version was heavy on animation, slow to load, and the prices were hard to find. The new one puts prices up front and lets you build a cart of several dishes that arrives on our WhatsApp as one order. It also has separate pages for corporate lunches and catering, and for the areas we deliver to, so people searching locally can find us.</p>
+      <p class="meta">Vite, plain JavaScript, a JSON menu, Vercel. Built with AI coding tools; the next step is a WhatsApp assistant that answers menu questions and takes orders from the same menu file.</p>
+      <p class="links"><a href="https://www.dumbiryanirasoi.in">dumbiryanirasoi.in</a> · <a href="https://github.com/At0591/Dum-Biryani-Rasoi">Code on GitHub</a></p>
+    </article>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>Lead pipeline and sales prompts</h3>
+        <span class="year">2026</span>
+      </div>
+      <p>The earlier, messier version of the PixelPolish work. Apify scrapers collected prospects and pushed them into Instantly for outreach, with agents handling lead lists, SEO content and personalised first lines. I also wrote prompt sets for the sales side: one that handles common objections from high-ticket buyers, and one that audits ad and email copy before it's sent.</p>
+      <p class="meta">Apify, Instantly.ai, Antigravity CLI, prompt design.</p>
+    </article>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>Morning Ritual</h3>
+        <span class="year">2026</span>
+      </div>
+      <p>An alarm clock for iOS and Android that won't stop until you've done one small task. There are 1,000 of them across body, mind, brain and creative themes, and you confirm with a quick photo or a check-in. The idea is that an alarm shouldn't punish you with maths problems or a barcode hunt. On Android it uses a native module I added around AlarmManager, because ordinary notifications get delayed by battery saving and an alarm that rings late is useless. Everything stays on the phone in SQLite; there are no accounts.</p>
+      <p class="meta">React Native, Expo, TypeScript, a custom native Android module, SQLite, expo-camera, PostHog, RevenueCat.</p>
+      <p class="links"><a href="https://github.com/At0591/morning-ritual">Code on GitHub</a></p>
+    </article>
+  </section>
+
+  <section id="tools">
+    <h2>Tools</h2>
+    <dl class="tools">
+      <dt>Building with now</dt>
+      <dd>Python, LLM APIs through OpenRouter, Pydantic, prompt design, Apify, Instantly, Git</dd>
+      <dt>Have shipped with</dt>
+      <dd>React Native, Expo, TypeScript, SQLite, Vite, Vercel, PostHog, RevenueCat</dd>
+      <dt>Learning next</dt>
+      <dd>Retrieval over documents (RAG) and vector databases, n8n, FastAPI, Docker</dd>
+      <dt>From the day jobs</dt>
+      <dd>CRM rollout, B2B sales, account management, running a small team, Excel</dd>
+    </dl>
+  </section>
+
+  <section id="before">
+    <h2>Before this</h2>
+    <ol class="timeline">
+      <li><span class="when">2025 to now</span><span class="what"><strong>Dum Biryani Rasoi</strong>, owner. Operations, money and the website for a delivery kitchen.</span></li>
+      <li><span class="when">2023 to 2025</span><span class="what"><strong>Lushvibes</strong>, operations manager. Moved the business from selling to consumers to selling to companies, cut marketing spend by 30%, and brought in a CRM.</span></li>
+      <li><span class="when">2022 to 2023</span><span class="what"><strong>Permanent TSB</strong>, Dublin. Branch customer service advisor, from first enquiry through to sale.</span></li>
+      <li><span class="when">2021 to 2022</span><span class="what"><strong>Health Service Executive</strong>, Dublin. Data processor on COVID contact tracing, working with test centres and labs under data-protection rules.</span></li>
+      <li><span class="when">2016 to 2019</span><span class="what"><strong>Kanak Digifex</strong>, Mumbai. Sales and marketing manager. Team of eight, around sixty client accounts.</span></li>
+      <li><span class="when">2010 to 2013</span><span class="what"><strong>Welcome Support Services</strong>, Mumbai. Business development.</span></li>
+    </ol>
+    <p class="edu">MSc International Business Management, National College of Ireland, 2021. BCA, Atharva Institute of Information Technology, 2016.</p>
+  </section>
+
+  <footer>
+    <h2>Get in touch</h2>
+    <p>The quickest way is a message on <a href="https://www.linkedin.com/in/akshay-tambe">LinkedIn</a>. My code is on <a href="https://github.com/At0591">GitHub</a>.</p>
+    <p class="small">Updated November 2026. Built with an AI pair-programmer.</p>
+  </footer>
+
+</main>
+</body>
+</html>
