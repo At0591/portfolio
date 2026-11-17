@@ -3,108 +3,264 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Akshay Tambe · AI automation, Mumbai</title>
-  <meta name="description" content="I build AI agents and automations for small businesses, starting with the ones I run. Ten years in sales and operations before that.">
-  <meta property="og:title" content="Akshay Tambe · AI automation">
-  <meta property="og:description" content="AI agents and automations for small businesses, built by someone who has done the sales and operations work they replace.">
+  <title>Akshay Tambe · AI automation engineer, Mumbai</title>
+  <meta name="description" content="I build AI agents and automations for small businesses, and test them on the businesses I run. Ten years in sales and operations before that.">
+  <meta property="og:title" content="Akshay Tambe · AI automation, built by someone who has done the job">
+  <meta property="og:description" content="AI agents, apps and websites for businesses I run: a sales agent, an alarm app, a photo studio and a delivery kitchen.">
+  <meta property="og:image" content="https://akshay-tambe.vercel.app/assets/dumbiryanirasoi-home.jpg">
+  <meta name="theme-color" content="#15130F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
 
-  <header class="intro">
-    <h1>Akshay Tambe</h1>
-    <p class="where">Mumbai. Looking for AI automation and solutions roles, on-site or remote.</p>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Akshay Tambe, back to top"><span class="mark">AT</span> Akshay Tambe</a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#background">Background</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="status" href="https://www.linkedin.com/in/akshay-tambe"><span class="dot" aria-hidden="true"></span>Open to AI roles</a>
+  </div>
+</header>
 
-    <p>I build AI agents and automations for small businesses. Most of them start as fixes for problems in businesses I run: a listing-photo studio, a biryani kitchen in Andheri West, and an alarm app.</p>
+<main id="top">
 
-    <p>Before that I spent about ten years in sales, customer service and operations, in Mumbai and in Dublin. I've looked after sixty client accounts while cold-calling for new ones, and keyed patient records into a CRM during COVID contact tracing, so I have a fair idea which parts of that work a machine should be doing.</p>
-  </header>
-
-  <section id="work">
-    <h2>Things I've built</h2>
-
-    <article class="project">
-      <div class="project-head">
-        <h3>A sales agent for PixelPolish</h3>
-        <span class="year">2026</span>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">AI automation engineer · Mumbai or remote</p>
+        <h1>AI automation, built by someone who has <em>done the job.</em></h1>
+        <p class="lede">Ten years of selling, managing accounts and running operations taught me where a business loses its hours. Now I build the agents that win them back, and I prove them on the businesses I run.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#work">See the work</a>
+          <a class="btn btn-ghost" href="https://github.com/At0591">Read the code on GitHub</a>
+        </div>
       </div>
-      <p>PixelPolish edits listing photos for hotels and Airbnb hosts. Finding clients used to mean looking up each business, judging their photos and writing to them one by one. This script does the first pass: it reads a prospect's website, runs a couple of searches, and has an LLM score the fit and draft an email that only uses facts it actually found. If the search results turn out to be about some other business, it skips that one. I read every draft before it goes out.</p>
-      <figure class="artifact">
-        <figcaption>From a real run, outputs/outreach-20261117.md</figcaption>
-<pre>Abode Bombay — fit 9/10
 
-Subject: Photo editing for Abode Bombay's room listings
+      <figure class="terminal reveal" aria-label="Output from a run of the PixelPolish sales agent">
+        <div class="terminal-bar"><span></span><span></span><span></span><b>sales-agent</b></div>
+<pre><span class="t-dim">$</span> python agent.py hotels.csv
+<span class="t-dim">[1/3]</span> Abode Bombay: researching...
+<span class="t-dim">[1/3]</span> Abode Bombay: drafting...
+<span class="t-dim">[2/3]</span> Ahilya by the Sea: researching...
+<span class="t-dim">[2/3]</span> Ahilya by the Sea: drafting...
+<span class="t-dim">[3/3]</span> Bloomrooms Link Road: researching...
+<span class="t-warn">  skipped: research didn't match this business</span>
 
-I came across your 25-room boutique hotel in Colaba, housed in a heritage property from 1910. With room types ranging from suites to basic rooms, clear and consistent listing photos can help guests compare and book with confidence.</pre>
+<span class="t-ok">Saved: outreach.csv  (2 drafts, best fit first)</span>
+<span class="t-dim">claude-haiku-5.5 · ~10s per email · ~$0.002 per lead</span></pre>
       </figure>
-      <p class="meta">Python, OpenRouter, Pydantic, DuckDuckGo search, BeautifulSoup. Runs on free or very cheap models, one model call per business.</p>
-      <p class="links"><a href="https://github.com/At0591/ai-portfolio/tree/main/01-ai-sales-agent">Code on GitHub</a> · <a href="https://www.pixelpolish.art">pixelpolish.art</a></p>
-    </article>
+    </div>
 
-    <article class="project">
-      <div class="project-head">
-        <h3>Dum Biryani Rasoi website</h3>
-        <span class="year">2026</span>
-      </div>
-      <p>The site for my cloud kitchen in Four Bungalows. The old version was heavy on animation, slow to load, and the prices were hard to find. The new one puts prices up front and lets you build a cart of several dishes that arrives on our WhatsApp as one order. It also has separate pages for corporate lunches and catering, and for the areas we deliver to, so people searching locally can find us.</p>
-      <p class="meta">Vite, plain JavaScript, a JSON menu, Vercel. Built with AI coding tools; the next step is a WhatsApp assistant that answers menu questions and takes orders from the same menu file.</p>
-      <p class="links"><a href="https://www.dumbiryanirasoi.in">dumbiryanirasoi.in</a> · <a href="https://github.com/At0591/Dum-Biryani-Rasoi">Code on GitHub</a></p>
-    </article>
-
-    <article class="project">
-      <div class="project-head">
-        <h3>Lead pipeline and sales prompts</h3>
-        <span class="year">2026</span>
-      </div>
-      <p>The earlier, messier version of the PixelPolish work. Apify scrapers collected prospects and pushed them into Instantly for outreach, with agents handling lead lists, SEO content and personalised first lines. I also wrote prompt sets for the sales side: one that handles common objections from high-ticket buyers, and one that audits ad and email copy before it's sent.</p>
-      <p class="meta">Apify, Instantly.ai, Antigravity CLI, prompt design.</p>
-    </article>
-
-    <article class="project">
-      <div class="project-head">
-        <h3>Morning Ritual</h3>
-        <span class="year">2026</span>
-      </div>
-      <p>An alarm clock for iOS and Android that won't stop until you've done one small task. There are 1,000 of them across body, mind, brain and creative themes, and you confirm with a quick photo or a check-in. The idea is that an alarm shouldn't punish you with maths problems or a barcode hunt. On Android it uses a native module I added around AlarmManager, because ordinary notifications get delayed by battery saving and an alarm that rings late is useless. Everything stays on the phone in SQLite; there are no accounts.</p>
-      <p class="meta">React Native, Expo, TypeScript, a custom native Android module, SQLite, expo-camera, PostHog, RevenueCat.</p>
-      <p class="links"><a href="https://github.com/At0591/morning-ritual">Code on GitHub</a></p>
-    </article>
+    <div class="wrap">
+      <dl class="proof reveal">
+        <div><dt>4</dt><dd>products built, from an AI agent to a mobile app</dd></div>
+        <div><dt>2</dt><dd>businesses I run, where every tool gets tested first</dd></div>
+        <div><dt>10 yrs</dt><dd>in B2B sales, accounts and operations in Mumbai and Dublin</dd></div>
+        <div><dt>$0.002</dt><dd>to research a prospect and draft a grounded email</dd></div>
+      </dl>
+    </div>
   </section>
 
-  <section id="tools">
-    <h2>Tools</h2>
-    <dl class="tools">
-      <dt>Building with now</dt>
-      <dd>Python, LLM APIs through OpenRouter, Pydantic, prompt design, Apify, Instantly, Git</dd>
-      <dt>Have shipped with</dt>
-      <dd>React Native, Expo, TypeScript, SQLite, Vite, Vercel, PostHog, RevenueCat</dd>
-      <dt>Learning next</dt>
-      <dd>Retrieval over documents (RAG) and vector databases, n8n, FastAPI, Docker</dd>
-      <dt>From the day jobs</dt>
-      <dd>CRM rollout, B2B sales, account management, running a small team, Excel</dd>
-    </dl>
+  <!-- Work -->
+  <section id="work" class="work">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow">Selected work</p>
+        <h2>Four products, each solving a problem I had.</h2>
+      </header>
+
+      <!-- 01 Sales agent -->
+      <article class="case reveal">
+        <div class="case-copy">
+          <p class="case-num">01 · AI agent · 2026</p>
+          <h3>A sales agent that researches before it writes</h3>
+          <p>Cold outreach for PixelPolish meant checking every hotel by hand before writing a single line. The agent now reads each prospect's website, searches for them and drafts a short email built only on facts it found. If the results describe a different business, it skips it instead of guessing.</p>
+          <ul class="points">
+            <li><strong>AI only where judgement matters.</strong> Search and scraping are ordinary code; the model is called once per prospect.</li>
+            <li><strong>Guardrails in code.</strong> Pydantic validation, plus checks for length, hype, invented detail and copied wording, with one automatic rewrite.</li>
+            <li><strong>Model chosen on evidence.</strong> Four models compared on identical research; Claude Haiku 5.5 wrote the most specific emails at about $0.002 each.</li>
+          </ul>
+          <p class="stack">Python · OpenRouter · Claude Haiku 5.5 · Pydantic · DuckDuckGo search · BeautifulSoup</p>
+          <p class="links"><a href="https://github.com/At0591/ai-portfolio/tree/main/01-ai-sales-agent">Read the code →</a></p>
+        </div>
+        <div class="case-visual">
+          <figure class="email">
+            <div class="email-head">
+              <span>To: Ahilya by the Sea</span>
+              <strong>Photos for the villas at Ahilya by the Sea</strong>
+            </div>
+            <p>Ahilya by the Sea spreads its nine rooms across three separate villas, and the Arjun's Tower treehouse is a different kind of room altogether. When guests compare stays online, photos that look consistent from one villa to the next help them picture each one. We adjust lighting and remove clutter and distractions, and the room layout stays exactly as it is.</p>
+            <p>If you'd like to see how it would look on your own photos, send me 3 of them and I'll return a free sample. No card needed.</p>
+            <p class="sig">Akshay, PixelPolish</p>
+            <figcaption><span class="tag tag-ok">Passed checks</span><span class="tag">Fit 7/10</span><span class="tag">Drafted in ~10s</span></figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- 02 Morning Ritual -->
+      <article class="case case-flip reveal">
+        <div class="case-copy">
+          <p class="case-num">02 · Mobile app · 2026</p>
+          <h3>An alarm that wakes you with a ritual, not a puzzle</h3>
+          <p>Morning Ritual only stops ringing once you finish one small task, picked from 1,000 across body, mind, brain and creative themes and confirmed with a photo or a check-in. It tracks seven-day streaks and plays gentle sounds instead of sirens.</p>
+          <ul class="points">
+            <li><strong>An alarm that rings on time.</strong> Android's battery saving delays ordinary notifications, so I wrote a native module around AlarmManager.</li>
+            <li><strong>Private by design.</strong> Everything stays on the phone in SQLite. No account, no cloud.</li>
+            <li><strong>Built to earn.</strong> Product analytics with PostHog and in-app subscriptions with RevenueCat.</li>
+          </ul>
+          <p class="stack">React Native · Expo · TypeScript · Custom Android module · SQLite · PostHog · RevenueCat</p>
+          <p class="links"><a href="https://github.com/At0591/morning-ritual">Read the code →</a></p>
+        </div>
+        <div class="case-visual phones">
+          <img src="https://raw.githubusercontent.com/At0591/morning-ritual/main/store-assets/screenshot-1.png" alt="Morning Ritual store image: Start your day with intention" loading="lazy" width="704" height="1520">
+          <img src="https://raw.githubusercontent.com/At0591/morning-ritual/main/store-assets/screenshot-2.png" alt="Morning Ritual store image: a ritual card reading Write 3 things you're grateful for" loading="lazy" width="704" height="1520">
+          <img src="https://raw.githubusercontent.com/At0591/morning-ritual/main/store-assets/screenshot-3.png" alt="Morning Ritual store image: four themes, body, mind, brain and creative, 1,000 rituals" loading="lazy" width="704" height="1520">
+        </div>
+      </article>
+
+      <!-- 03 PixelPolish -->
+      <article class="case reveal">
+        <div class="case-copy">
+          <p class="case-num">03 · Business · 2026</p>
+          <h3>PixelPolish: listing photos that win the booking</h3>
+          <p>A photo-editing studio I co-founded for Airbnb hosts, boutique hotels, coworking spaces and estate agents. We relight rooms, remove clutter, turn daytime exteriors into twilight shots and stage empty rooms, in 24 to 48 hours from $49.</p>
+          <ul class="points">
+            <li><strong>The website</strong> with before-and-after proof and a free three-photo sample to start the conversation.</li>
+            <li><strong>The lead pipeline:</strong> Apify scrapers feeding Instantly.ai, with agents handling lead lists, SEO content and personalised first lines.</li>
+            <li><strong>The sales prompts:</strong> one set for handling objections from high-ticket buyers, another that audits copy before it is sent.</li>
+          </ul>
+          <p class="stack">Apify · Instantly.ai · Antigravity CLI · Prompt design · Vercel</p>
+          <p class="links"><a href="https://www.pixelpolish.art">Visit pixelpolish.art →</a></p>
+        </div>
+        <div class="case-visual">
+          <figure class="compare" style="--pos: 50%">
+            <img src="https://www.pixelpolish.art/assets/portfolio/boutique/property_1/2_after.png" alt="Hotel lobby after editing: bright, even light" loading="lazy" width="1024" height="1024">
+            <img class="compare-before" src="https://www.pixelpolish.art/assets/portfolio/boutique/property_1/1_before.png" alt="The same hotel lobby before editing: dark and murky" loading="lazy" width="1024" height="1024">
+            <span class="compare-label left">Before</span><span class="compare-label right">After</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Drag to compare the photo before and after editing">
+            <span class="compare-handle" aria-hidden="true"></span>
+          </figure>
+          <p class="caption">Drag to compare. A real PixelPolish edit.</p>
+        </div>
+      </article>
+
+      <!-- 04 Dum Biryani Rasoi -->
+      <article class="case case-flip reveal">
+        <div class="case-copy">
+          <p class="case-num">04 · Website · 2025 to now</p>
+          <h3>A delivery kitchen's website, built to take orders</h3>
+          <p>I run Dum Biryani Rasoi, a delivery kitchen in Four Bungalows, Andheri West, and built its site. Prices are up front, every order button goes straight to Zomato, Swiggy, Magicpin or our WhatsApp, and dedicated pages cover meal plans, office catering and film-shoot catering.</p>
+          <ul class="points">
+            <li><strong>Built for search:</strong> local guide pages so people nearby find the kitchen when they look for food in the area.</li>
+            <li><strong>Built for larger orders:</strong> separate pages for offices and film crews, not just single meals.</li>
+          </ul>
+          <p class="stack">Next.js · Vercel · AI-assisted development with Antigravity CLI</p>
+          <p class="links"><a href="https://www.dumbiryanirasoi.in">Visit dumbiryanirasoi.in →</a></p>
+        </div>
+        <div class="case-visual">
+          <figure class="browser">
+            <div class="browser-bar"><span></span><span></span><span></span><b>dumbiryanirasoi.in</b></div>
+            <img src="assets/dumbiryanirasoi-home.jpg" alt="Dum Biryani Rasoi home page: dum biryani and homestyle thalis, with prices and order buttons for Zomato, Swiggy and Magicpin" loading="lazy" width="800" height="499">
+          </figure>
+        </div>
+      </article>
+    </div>
   </section>
 
-  <section id="before">
-    <h2>Before this</h2>
-    <ol class="timeline">
-      <li><span class="when">2025 to now</span><span class="what"><strong>Dum Biryani Rasoi</strong>, owner. Operations, money and the website for a delivery kitchen.</span></li>
-      <li><span class="when">2023 to 2025</span><span class="what"><strong>Lushvibes</strong>, operations manager. Moved the business from selling to consumers to selling to companies, cut marketing spend by 30%, and brought in a CRM.</span></li>
-      <li><span class="when">2022 to 2023</span><span class="what"><strong>Permanent TSB</strong>, Dublin. Branch customer service advisor, from first enquiry through to sale.</span></li>
-      <li><span class="when">2021 to 2022</span><span class="what"><strong>Health Service Executive</strong>, Dublin. Data processor on COVID contact tracing, working with test centres and labs under data-protection rules.</span></li>
-      <li><span class="when">2016 to 2019</span><span class="what"><strong>Kanak Digifex</strong>, Mumbai. Sales and marketing manager. Team of eight, around sixty client accounts.</span></li>
-      <li><span class="when">2010 to 2013</span><span class="what"><strong>Welcome Support Services</strong>, Mumbai. Business development.</span></li>
-    </ol>
-    <p class="edu">MSc International Business Management, National College of Ireland, 2021. BCA, Atharva Institute of Information Technology, 2016.</p>
+  <!-- Approach -->
+  <section id="approach" class="approach">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow">Approach</p>
+        <h2>How I build automation a business can trust.</h2>
+      </header>
+      <ol class="principles reveal">
+        <li><span>01</span><h3>Start from the business, not the model</h3><p>I've managed 60+ client accounts and run operations day to day. I automate the step that actually costs time, then work out which model fits.</p></li>
+        <li><span>02</span><h3>Use AI only where judgement is needed</h3><p>Searching, scraping and saving are ordinary code. They're cheaper, faster and easier to debug, and they leave the model to decide and write.</p></li>
+        <li><span>03</span><h3>Put guardrails in before scale</h3><p>Validated outputs, checks for invented facts, and a clean skip when evidence is thin. A wrong email to a real client costs more than no email.</p></li>
+        <li><span>04</span><h3>Measure, then choose</h3><p>Models are compared on identical inputs for quality, speed and cost, and the result is written down where the next person can see it.</p></li>
+      </ol>
+    </div>
   </section>
 
-  <footer>
-    <h2>Get in touch</h2>
-    <p>The quickest way is a message on <a href="https://www.linkedin.com/in/akshay-tambe">LinkedIn</a>. My code is on <a href="https://github.com/At0591">GitHub</a>.</p>
-    <p class="small">Updated November 2026. Built with an AI pair-programmer.</p>
-  </footer>
+  <!-- Background -->
+  <section id="background" class="background">
+    <div class="wrap bg-grid">
+      <header class="section-head reveal">
+        <p class="eyebrow">Background</p>
+        <h2>Before I wrote agents, I did the work they help with.</h2>
+        <p class="edu">MSc International Business Management, National College of Ireland (2021)<br>BCA, Atharva Institute of Information Technology (2016)</p>
+      </header>
+      <ol class="timeline reveal">
+        <li><span class="when">2025 to now</span><div><h3>Dum Biryani Rasoi · Owner</h3><p>Run operations, finances and customer experience for a delivery kitchen, and built its website.</p></div></li>
+        <li><span class="when">2023 to 2025</span><div><h3>Lushvibes · Operations Manager</h3><p>Moved the business from consumer to B2B sales, cut marketing spend by 30% and rolled out a CRM to track customer queries.</p></div></li>
+        <li><span class="when">2022 to 2023</span><div><h3>Permanent TSB, Dublin · Customer Service Advisor</h3><p>Ran branch sales from lead generation to fulfilment and grew business 45% across customer segments.</p></div></li>
+        <li><span class="when">2021 to 2022</span><div><h3>Health Service Executive, Dublin · Data Processor</h3><p>Processed high-volume patient data for COVID contact tracing under data-protection rules, working with an 18-person team and more than four test centres and labs.</p></div></li>
+        <li><span class="when">2016 to 2019</span><div><h3>Kanak Digifex, Mumbai · Sales &amp; Marketing Manager</h3><p>Led a team of eight and a portfolio of 60+ accounts, with a renewal rate of about 70% and customer satisfaction of at least 90%.</p></div></li>
+        <li><span class="when">2010 to 2013</span><div><h3>Welcome Support Services, Mumbai · Business Development</h3><p>Beat sales targets by 20% and cut customer complaints by 25%.</p></div></li>
+      </ol>
+    </div>
+  </section>
 
+  <!-- Toolkit -->
+  <section class="toolkit">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow">Toolkit</p>
+        <h2>What I build with.</h2>
+      </header>
+      <div class="tool-groups reveal">
+        <div><h3>AI &amp; automation</h3><ul class="chips"><li>Python</li><li>LLM APIs (OpenRouter, Claude)</li><li>Pydantic</li><li>Prompt design</li><li>Model evaluation</li><li>Apify</li><li>Instantly.ai</li><li>Antigravity CLI</li></ul></div>
+        <div><h3>Web &amp; mobile</h3><ul class="chips"><li>React Native</li><li>Expo</li><li>TypeScript</li><li>Next.js</li><li>Vite</li><li>SQLite</li><li>Vercel</li><li>PostHog</li><li>RevenueCat</li></ul></div>
+        <div><h3>Business</h3><ul class="chips"><li>B2B sales</li><li>Account management</li><li>CRM rollout</li><li>Operations</li><li>Team leadership</li></ul></div>
+        <div><h3>Learning now</h3><ul class="chips chips-soft"><li>RAG &amp; vector databases</li><li>n8n</li><li>FastAPI</li><li>Docker</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="wrap reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Hiring for AI automation or solutions work?</h2>
+      <p class="lede">I'm looking for a role in Mumbai or remote, building agents a business actually relies on. The fastest way to reach me is LinkedIn.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/akshay-tambe">Message me on LinkedIn</a>
+        <a class="btn btn-ghost-light" href="https://github.com/At0591">GitHub</a>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 Akshay Tambe</span>
+    <span>Mumbai, India</span>
+  </div>
+</footer>
+
+<script>
+  // Before/after slider
+  document.querySelectorAll('.compare').forEach(function (fig) {
+    var input = fig.querySelector('input');
+    input.addEventListener('input', function () { fig.style.setProperty('--pos', input.value + '%'); });
+  });
+  // Gentle reveal on scroll (skipped when the visitor prefers reduced motion)
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('js-reveal');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  }
+</script>
 </body>
 </html>
