@@ -106,7 +106,7 @@ p { margin: 0 0 1rem; }
 .hero h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1.02; letter-spacing: -.025em; margin-bottom: 1.5rem; }
 .hero h1 em { font-style: italic; color: var(--accent); }
 
-.hero-visual { position: relative; padding: 0 0 8.5rem 2.5rem; }
+.hero-visual { max-width: 470px; justify-self: end; width: 100%; }
 .portrait {
   width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 25%;
   border-radius: 20px; box-shadow: var(--shadow); background: var(--ink);
@@ -116,10 +116,8 @@ p { margin: 0 0 1rem; }
   box-shadow: 0 2px 4px rgba(21,19,15,.12), 0 24px 48px -16px rgba(21,19,15,.45);
   overflow: hidden; border: 1px solid #2f2b25;
 }
-.hero-visual .terminal {
-  position: absolute; left: 0; bottom: 0; width: min(84%, 420px); transform: rotate(-1deg);
-}
-.hero-visual .terminal pre { font-size: .72rem; line-height: 1.65; padding: 1rem 1.1rem 1.1rem; }
+.case-stack { display: grid; gap: 1.25rem; }
+.case-stack .terminal pre { font-size: .74rem; line-height: 1.65; padding: 1rem 1.2rem 1.1rem; }
 .terminal-bar, .browser-bar {
   display: flex; align-items: center; gap: 6px; padding: .7rem .9rem;
   background: #221f1a; border-bottom: 1px solid #2f2b25;
@@ -273,9 +271,7 @@ p { margin: 0 0 1rem; }
 @media (max-width: 960px) {
   .hero-grid, .case, .bg-grid { grid-template-columns: 1fr; }
   .case-flip .case-copy { order: 0; }
-  .hero-visual { padding: 0; max-width: 520px; }
-  .hero-visual .terminal { position: relative; width: 100%; transform: none; margin-top: -3.5rem; }
-  .portrait { width: 86%; margin-left: auto; display: block; }
+  .hero-visual { justify-self: start; max-width: 420px; }
   .proof { grid-template-columns: repeat(2, 1fr); }
   .proof div:nth-child(3) { padding-left: 0; border-left: 0; }
   .proof div:nth-child(n+3) { border-top: 1px solid var(--line); margin-top: 1.6rem; }
