@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Akshay Tambe · AI automation engineer, Mumbai</title>
   <meta name="description" content="I build AI agents and automations for small businesses, and test them on the businesses I run. Ten years in sales and operations before that.">
-  <meta property="og:title" content="Akshay Tambe · AI automation, built by someone who has done the job">
+  <meta property="og:title" content="Akshay Tambe · AI agents for the sales and operations work I did for 10 years">
   <meta property="og:description" content="AI agents, apps and websites I built for the businesses I run, including a sales agent and the KindRise alarm app.">
   <meta property="og:image" content="https://akshay-tambe.vercel.app/assets/portrait.jpg">
   <meta name="theme-color" content="#15130F">
@@ -25,7 +25,7 @@
       <a href="#background">Background</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="status" href="https://www.linkedin.com/in/akshay-tambe"><span class="dot" aria-hidden="true"></span>Open to AI roles</a>
+    <a class="status" href="#contact"><span class="dot" aria-hidden="true"></span>Open to AI roles</a>
   </div>
 </header>
 
@@ -36,10 +36,11 @@
     <div class="wrap hero-grid">
       <div class="hero-copy reveal">
         <p class="eyebrow">AI automation engineer · Mumbai or remote</p>
-        <h1>AI automation built by someone who has <em>done the job</em></h1>
-        <p class="lede">Ten years of selling, managing accounts and running operations taught me where a business loses its hours. Now I build the agents that win them back, and I prove them on the businesses I run.</p>
+        <h1>AI agents for the sales and operations work I did for <em>10 years</em></h1>
+        <p class="lede">Selling, managing accounts and running operations in Mumbai and Dublin showed me where a business loses its hours. I now build agents that take on that work. I test each one on the 2 businesses I run.</p>
         <div class="actions">
           <a class="btn btn-primary" href="#work">See the work</a>
+          <a class="btn btn-ghost" href="#contact">Contact me</a>
           <a class="btn btn-ghost" href="https://github.com/At0591">Read the code on GitHub</a>
         </div>
       </div>
@@ -51,10 +52,10 @@
 
     <div class="wrap">
       <dl class="proof reveal">
-        <div><dt>4</dt><dd>products built, from an AI agent to a mobile app</dd></div>
-        <div><dt>2</dt><dd>businesses I run, where every tool gets tested first</dd></div>
+        <div><dt>$0.002</dt><dd>to research a prospect and draft an email built on facts it found</dd></div>
+        <div><dt>69</dt><dd>automated tests on an Android alarm app with a custom Kotlin module</dd></div>
+        <div><dt>60+</dt><dd>client accounts managed, with about 70% renewing</dd></div>
         <div><dt>10 yrs</dt><dd>in B2B sales, accounts and operations in Mumbai and Dublin</dd></div>
-        <div><dt>$0.002</dt><dd>to research a prospect and draft a grounded email</dd></div>
       </dl>
     </div>
   </section>
@@ -64,7 +65,7 @@
     <div class="wrap">
       <header class="section-head reveal">
         <p class="eyebrow">Selected work</p>
-        <h2>Four products, each built for a problem I had</h2>
+        <h2>4 products, each built for a problem I had</h2>
       </header>
 
       <!-- 01 Sales agent -->
@@ -72,11 +73,11 @@
         <div class="case-copy">
           <p class="case-num">01 · AI agent · 2026</p>
           <h3>A sales agent that researches before it writes</h3>
-          <p>Cold outreach for PixelPolish meant checking every hotel by hand before writing anything. The agent now reads each prospect's website, searches for them and drafts a short email built only on facts it found. If the results describe a different business, it skips it instead of guessing.</p>
+          <p>Cold outreach for PixelPolish meant checking every hotel by hand before writing a word. The agent now reads each prospect's website, searches for them and drafts a short email built only on facts it found. Each draft takes about 10 seconds and costs about $0.002. When the research describes a different business, the agent skips the prospect instead of guessing.</p>
           <ul class="points">
-            <li>Search and scraping are ordinary code. The model is called once per prospect, to judge the fit and write.</li>
-            <li>Code checks every draft: Pydantic validation, plus checks for length, hype, invented detail and copied wording, with one automatic rewrite if a check fails.</li>
-            <li>I compared four models on the same research. Claude Haiku 5.5 wrote the most specific emails, at about $0.002 each.</li>
+            <li>Search and scraping are ordinary code. The model is called once per prospect, to judge the fit and write the email.</li>
+            <li>Acceptance checks run on every draft. Pydantic validates the model's output, and code checks length, hype, invented detail and copied wording. A draft that fails gets 1 automatic rewrite.</li>
+            <li>For model evaluation, I ran 4 models on the same research. Claude Haiku 5.5 wrote the most specific emails.</li>
           </ul>
           <p class="stack">Python · OpenRouter · Claude Haiku 5.5 · Pydantic · DuckDuckGo search · BeautifulSoup</p>
           <p class="links"><a href="https://github.com/At0591/ai-portfolio/tree/main/01-ai-sales-agent">Read the code</a></p>
@@ -115,11 +116,12 @@
         <div class="case-copy">
           <p class="case-num">02 · Android app · before launch · 2026</p>
           <h3>KindRise: a gentle alarm for people who oversleep</h3>
-          <p>A tune starts quiet and gets louder. To turn it off, you tap a rising sun to show you're awake, with no maths puzzles. Then you write one small good thing in a journal on your phone. Ten minutes later, the app checks that you're still up. An optional ritual follows, chosen from 41 that each show their evidence level and source.</p>
+          <p>A tune starts quiet and gets louder. To turn it off, you tap a rising sun to show that you are awake. There are no maths puzzles. Then you write one small good thing in a journal on your phone. Ten minutes later, the app checks that you are still up. An optional ritual follows, chosen from 41 that each show their evidence level and source.</p>
           <ul class="points">
-            <li>Vivo and iQOO phones freeze ordinary scheduled alarms to save battery. So I wrote a Kotlin module that uses Android's alarm-clock API and rings through a foreground service. It opens over the lock screen, and I tested it on an iQOO with the app closed.</li>
+            <li>Vivo and iQOO phones freeze ordinary scheduled alarms to save battery. So I wrote a Kotlin module that uses Android's alarm-clock API and rings through a foreground service. It opens over the lock screen, and I tested it on an iQOO Neo 10R running Android 16 with the app closed.</li>
             <li>The journal never leaves the phone. Usage counts go to PostHog only if the user says yes, and the app strips any free text before sending.</li>
-            <li>Sunrise and Brahma Muhurta times are worked out on the phone, and tests check them against Drik Panchang's published times.</li>
+            <li>The app works out sunrise and Brahma Muhurta (a traditional pre-dawn time in Hindu practice) on the phone. Tests check those times against Drik Panchang, a widely used Hindu calendar.</li>
+            <li>69 Jest tests run on every push through GitHub Actions.</li>
           </ul>
           <p class="stack">React Native · Expo · TypeScript · Kotlin · SQLite · Jest · GitHub Actions</p>
           <p class="links"><a href="https://github.com/At0591/morning-ritual">Read the code</a></p>
@@ -133,11 +135,11 @@
       <article class="case reveal">
         <div class="case-copy">
           <p class="case-num">03 · Business · 2026</p>
-          <h3>PixelPolish: listing photos that win the booking</h3>
-          <p>A photo-editing studio I co-founded for Airbnb hosts, boutique hotels, coworking spaces and estate agents. We relight and declutter rooms, stage empty ones and turn daytime exteriors into twilight shots. Edits take 24 to 48 hours and start at $49.</p>
+          <h3>PixelPolish: edited listing photos for hosts and hotels, from $49</h3>
+          <p>I co-founded PixelPolish to edit photos for Airbnb hosts, boutique hotels, coworking spaces and estate agents. We relight and declutter rooms, stage empty ones and turn daytime exteriors into twilight shots. Edits take 24 to 48 hours.</p>
           <ul class="points">
             <li>A website with before-and-after examples and a free three-photo sample to start the conversation.</li>
-            <li>A lead pipeline: Apify scrapers feed Instantly.ai, and agents build the lead lists, SEO content and personalised first lines.</li>
+            <li>A lead workflow: Apify scrapers feed Instantly.ai, and a multi-agent workflow builds the lead lists, SEO content and personalised first lines.</li>
             <li>Sales prompts that handle objections from high-ticket buyers, and a prompt that checks copy before it goes out.</li>
           </ul>
           <p class="stack">Apify · Instantly.ai · Antigravity CLI · Prompt design · Vercel</p>
@@ -159,7 +161,7 @@
       <article class="case case-flip reveal">
         <div class="case-copy">
           <p class="case-num">04 · Website · 2025 to now</p>
-          <h3>A delivery kitchen's website, built to take orders</h3>
+          <h3>Dum Biryani Rasoi: prices and order links up front</h3>
           <p>I run Dum Biryani Rasoi, a delivery kitchen in Four Bungalows, Andheri West, and I built its website. Prices are shown up front, and every order button goes straight to Zomato, Swiggy, Magicpin or our WhatsApp. Separate pages cover meal plans, office catering and film-shoot catering.</p>
           <ul class="points">
             <li>Local guide pages help people nearby find the kitchen when they search for food in the area.</li>
@@ -183,13 +185,13 @@
     <div class="wrap">
       <header class="section-head reveal">
         <p class="eyebrow">Approach</p>
-        <h2>How I build automation a business can trust</h2>
+        <h2>Automation a business can trust: 4 rules I build by</h2>
       </header>
       <ol class="principles reveal">
-        <li><span>01</span><h3>Start from the business</h3><p>I've managed 60+ client accounts and run operations day to day. I automate the step that costs the most time, then work out which model fits.</p></li>
+        <li><span>01</span><h3>Start from the business</h3><p>I have managed more than 60 client accounts, and I run a kitchen's operations. I find the step that costs the most time and automate it first. Then I choose the model.</p></li>
         <li><span>02</span><h3>Use AI where judgement is needed</h3><p>Searching, scraping and saving are ordinary code, which is cheaper, faster and easier to debug. The model decides and writes.</p></li>
         <li><span>03</span><h3>Add checks before scaling up</h3><p>Outputs are validated, drafts are checked for invented facts, and a prospect is skipped when the evidence is thin. A wrong email to a real client costs more than no email.</p></li>
-        <li><span>04</span><h3>Compare models before choosing one</h3><p>I compare models on the same inputs for quality, speed and cost, and write the result down where the next person can see it.</p></li>
+        <li><span>04</span><h3>Evaluate models before choosing one</h3><p>I run several models on the same inputs and compare quality, speed and cost. I write the result down where the next person can see it.</p></li>
       </ol>
     </div>
   </section>
@@ -199,13 +201,14 @@
     <div class="wrap bg-grid">
       <header class="section-head reveal">
         <p class="eyebrow">Background</p>
-        <h2>Ten years in the jobs these agents now help with</h2>
+        <h2>10 years in the jobs these agents now help with</h2>
+        <p class="edu">I started in sales in Mumbai and moved to Dublin for an MSc and operations work. Back in Mumbai, I run my own businesses and build AI automation.</p>
         <p class="edu">MSc International Business Management, National College of Ireland (2021)<br>BCA, Atharva Institute of Information Technology (2016)</p>
       </header>
       <ol class="timeline reveal">
         <li><span class="when">2025 to now</span><div><h3>Owner, Dum Biryani Rasoi</h3><p>I run the operations, finances and customer experience of a delivery kitchen, and I built its website.</p></div></li>
         <li><span class="when">2023 to 2025</span><div><h3>Operations manager, Lushvibes</h3><p>Moved the business from consumer to B2B sales and cut marketing spend by 30%. Rolled out a CRM to track customer queries.</p></div></li>
-        <li><span class="when">2022 to 2023</span><div><h3>Customer service advisor, Permanent TSB, Dublin</h3><p>Ran branch sales from lead generation to fulfilment, and grew business by 45% across customer segments.</p></div></li>
+        <li><span class="when">2022 to 2023</span><div><h3>Customer service advisor, Permanent TSB, Dublin</h3><p>Handled branch sales from lead generation to fulfilment.</p></div></li>
         <li><span class="when">2021 to 2022</span><div><h3>Data processor, Health Service Executive, Dublin</h3><p>Processed high volumes of patient data for COVID-19 contact tracing under data-protection rules. Worked with a team of 18 and more than four test centres and labs.</p></div></li>
         <li><span class="when">2016 to 2019</span><div><h3>Sales and marketing manager, Kanak Digifex, Mumbai</h3><p>Led a team of eight and managed more than 60 accounts. Kept renewals at about 70% and customer satisfaction at 90% or higher.</p></div></li>
         <li><span class="when">2010 to 2013</span><div><h3>Business development executive, Welcome Support Services, Mumbai</h3><p>Beat sales targets by 20% and cut customer complaints by 25%.</p></div></li>
@@ -221,8 +224,8 @@
         <h2>What I build with</h2>
       </header>
       <div class="tool-groups reveal">
-        <div><h3>AI and automation</h3><ul class="chips"><li>Python</li><li>LLM APIs (OpenRouter, Claude)</li><li>Pydantic</li><li>Prompt design</li><li>Model evaluation</li><li>Apify</li><li>Instantly.ai</li><li>Antigravity CLI</li></ul></div>
-        <div><h3>Web and mobile</h3><ul class="chips"><li>React Native</li><li>Expo</li><li>TypeScript</li><li>Next.js</li><li>Vite</li><li>SQLite</li><li>Vercel</li><li>PostHog</li><li>RevenueCat</li></ul></div>
+        <div><h3>AI and automation</h3><ul class="chips"><li>Python</li><li>LLM APIs (OpenRouter, Claude)</li><li>Pydantic</li><li>Prompt design</li><li>LLM evaluation</li><li>Multi-agent workflows</li><li>Apify</li><li>Instantly.ai</li><li>Antigravity CLI</li></ul></div>
+        <div><h3>Web and mobile</h3><ul class="chips"><li>React Native</li><li>Expo</li><li>TypeScript</li><li>Kotlin</li><li>Next.js</li><li>SQLite</li><li>Jest</li><li>GitHub Actions</li><li>Vercel</li><li>PostHog</li></ul></div>
         <div><h3>Business</h3><ul class="chips"><li>B2B sales</li><li>Account management</li><li>CRM rollout</li><li>Operations</li><li>Team leadership</li></ul></div>
         <div><h3>Learning now</h3><ul class="chips chips-soft"><li>RAG and vector databases</li><li>n8n</li><li>FastAPI</li><li>Docker</li></ul></div>
       </div>
@@ -234,7 +237,7 @@
     <div class="wrap reveal">
       <p class="eyebrow">Contact</p>
       <h2>Hiring for AI automation or solutions work?</h2>
-      <p class="lede">I'm looking for a role in Mumbai or remote, building agents that a business relies on. The best way to contact me is a message on LinkedIn.</p>
+      <p class="lede">I am looking for an AI automation or solutions role in Mumbai or remote, building agents that a business relies on. A message on LinkedIn reaches me fastest.</p>
       <div class="actions">
         <a class="btn btn-primary" href="https://www.linkedin.com/in/akshay-tambe">Message me on LinkedIn</a>
         <a class="btn btn-ghost-light" href="https://github.com/At0591">GitHub</a>
