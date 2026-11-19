@@ -289,3 +289,6 @@ p { margin: 0 0 1rem; }
   .footer-inner { flex-direction: column; gap: .3rem; }
   .email { padding: 1.3rem; }
 }
+
+/* KindRise logo tile in the work section */
+.case-visual img.logo-tile { width: 100%; max-width: 420px; height: auto; aspect-ratio: 1 / 1; object-fit: contain; border-radius: 24px; margin: 0 auto; display: block; }

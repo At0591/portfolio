@@ -6,7 +6,7 @@
   <title>Akshay Tambe · AI automation engineer, Mumbai</title>
   <meta name="description" content="I build AI agents and automations for small businesses, and test them on the businesses I run. Ten years in sales and operations before that.">
   <meta property="og:title" content="Akshay Tambe · AI automation, built by someone who has done the job">
-  <meta property="og:description" content="AI agents, apps and websites for businesses I run: a sales agent, an alarm app, a photo studio and a delivery kitchen.">
+  <meta property="og:description" content="AI agents, apps and websites for businesses I run: a sales agent, the KindRise alarm app, a photo studio and a delivery kitchen.">
   <meta property="og:image" content="https://akshay-tambe.vercel.app/assets/portrait.jpg">
   <meta name="theme-color" content="#15130F">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,12 +74,12 @@
           <h3>A sales agent that researches before it writes</h3>
           <p>Cold outreach for PixelPolish meant checking every hotel by hand before writing a single line. The agent now reads each prospect's website, searches for them and drafts a short email built only on facts it found. If the results describe a different business, it skips it instead of guessing.</p>
           <ul class="points">
-            <li><strong>AI only where judgement matters.</strong> Search and scraping are ordinary code; the model is called once per prospect.</li>
-            <li><strong>Guardrails in code.</strong> Pydantic validation, plus checks for length, hype, invented detail and copied wording, with one automatic rewrite.</li>
-            <li><strong>Model chosen on evidence.</strong> Four models compared on identical research; Claude Haiku 5.5 wrote the most specific emails at about $0.002 each.</li>
+            <li>Search and scraping are ordinary code. The model is called once per prospect, to judge the fit and write.</li>
+            <li>Code checks every draft: Pydantic validation, plus checks for length, hype, invented detail and copied wording, with one automatic rewrite if a check fails.</li>
+            <li>I compared four models on the same research. Claude Haiku 5.5 wrote the most specific emails, at about $0.002 each.</li>
           </ul>
           <p class="stack">Python · OpenRouter · Claude Haiku 5.5 · Pydantic · DuckDuckGo search · BeautifulSoup</p>
-          <p class="links"><a href="https://github.com/At0591/ai-portfolio/tree/main/01-ai-sales-agent">Read the code →</a></p>
+          <p class="links"><a href="https://github.com/At0591/ai-portfolio/tree/main/01-ai-sales-agent">Read the code</a></p>
         </div>
         <div class="case-visual case-stack">
           <figure class="terminal" aria-label="Output from a run of the PixelPolish sales agent">
@@ -108,24 +108,22 @@
         </div>
       </article>
 
-      <!-- 02 Morning Ritual -->
+      <!-- 02 KindRise -->
       <article class="case case-flip reveal">
         <div class="case-copy">
-          <p class="case-num">02 · Android app · in beta · 2026</p>
-          <h3>An alarm that wakes you with a ritual, not a puzzle</h3>
-          <p>Morning Ritual only stops ringing once you finish one small task, picked from 1,000 across body, mind, brain and creative themes and confirmed with a photo or a check-in. It tracks seven-day streaks and plays gentle sounds instead of sirens.</p>
+          <p class="case-num">02 · Android app · before launch · 2026</p>
+          <h3>KindRise: a gentle alarm for people who oversleep</h3>
+          <p>A tune starts quiet and gets louder. You tap a rising sun to show you're awake, write one small good thing in a journal on your phone, and ten minutes later the app checks you're still up. There are no maths puzzles. After that comes an optional ritual: 41 of them, each showing its evidence level and the source behind it.</p>
           <ul class="points">
-            <li><strong>An alarm that rings on time.</strong> Vivo and iQOO phones freeze ordinary scheduled alarms to save battery, so I wrote a Kotlin module around Android's AlarmManager that uses the same alarm-clock API as Google's Clock app.</li>
-            <li><strong>Private by design.</strong> Everything stays on the phone in SQLite. No account, no cloud.</li>
-            <li><strong>Ready to earn.</strong> PostHog analytics and RevenueCat subscriptions (a free tier of 120 rituals, premium for all 1,000) are wired in ahead of launch.</li>
+            <li>Vivo and iQOO phones freeze ordinary scheduled alarms to save battery. I wrote a Kotlin module that uses Android's alarm-clock API, rings through a foreground service and opens over the lock screen, and tested it on an iQOO with the app closed.</li>
+            <li>The journal never leaves the phone. Usage counts go to PostHog only if the user says yes, and the app strips any free text before sending.</li>
+            <li>Sunrise and Brahma Muhurta times are worked out on the phone, and tests check them against Drik Panchang's published times.</li>
           </ul>
-          <p class="stack">React Native · Expo · TypeScript · Custom Android module · SQLite · PostHog · RevenueCat</p>
-          <p class="links"><a href="https://github.com/At0591/morning-ritual">Read the code →</a></p>
+          <p class="stack">React Native · Expo · TypeScript · Kotlin · SQLite · Jest · GitHub Actions</p>
+          <p class="links"><a href="https://github.com/At0591/morning-ritual">Read the code</a></p>
         </div>
-        <div class="case-visual phones">
-          <img src="https://raw.githubusercontent.com/At0591/morning-ritual/main/store-assets/screenshot-1.png" alt="Morning Ritual store image: Start your day with intention" loading="lazy" width="704" height="1520">
-          <img src="https://raw.githubusercontent.com/At0591/morning-ritual/main/store-assets/screenshot-2.png" alt="Morning Ritual store image: a ritual card reading Write 3 things you're grateful for" loading="lazy" width="704" height="1520">
-          <img src="https://raw.githubusercontent.com/At0591/morning-ritual/main/store-assets/screenshot-3.png" alt="Morning Ritual store image: four themes, body, mind, brain and creative, 1,000 rituals" loading="lazy" width="704" height="1520">
+        <div class="case-visual">
+          <img class="logo-tile" src="assets/kindrise-splash.png" alt="KindRise logo: the words Kind and Rise stacked on a navy background, with a sun rising from the line between them" loading="lazy" width="1024" height="1024">
         </div>
       </article>
 
@@ -136,12 +134,12 @@
           <h3>PixelPolish: listing photos that win the booking</h3>
           <p>A photo-editing studio I co-founded for Airbnb hosts, boutique hotels, coworking spaces and estate agents. We relight rooms, remove clutter, turn daytime exteriors into twilight shots and stage empty rooms, in 24 to 48 hours from $49.</p>
           <ul class="points">
-            <li><strong>The website</strong> with before-and-after proof and a free three-photo sample to start the conversation.</li>
-            <li><strong>The lead pipeline:</strong> Apify scrapers feeding Instantly.ai, with agents handling lead lists, SEO content and personalised first lines.</li>
-            <li><strong>The sales prompts:</strong> one set for handling objections from high-ticket buyers, another that audits copy before it is sent.</li>
+            <li>A website with before-and-after examples and a free three-photo sample to start the conversation.</li>
+            <li>A lead pipeline: Apify scrapers feed Instantly.ai, and agents build the lead lists, SEO content and personalised first lines.</li>
+            <li>Two sets of sales prompts: one handles objections from high-ticket buyers, the other checks copy before it goes out.</li>
           </ul>
           <p class="stack">Apify · Instantly.ai · Antigravity CLI · Prompt design · Vercel</p>
-          <p class="links"><a href="https://www.pixelpolish.art">Visit pixelpolish.art →</a></p>
+          <p class="links"><a href="https://www.pixelpolish.art">Visit pixelpolish.art</a></p>
         </div>
         <div class="case-visual">
           <figure class="compare" style="--pos: 50%">
@@ -162,11 +160,11 @@
           <h3>A delivery kitchen's website, built to take orders</h3>
           <p>I run Dum Biryani Rasoi, a delivery kitchen in Four Bungalows, Andheri West, and built its site. Prices are up front, every order button goes straight to Zomato, Swiggy, Magicpin or our WhatsApp, and dedicated pages cover meal plans, office catering and film-shoot catering.</p>
           <ul class="points">
-            <li><strong>Built for search:</strong> local guide pages so people nearby find the kitchen when they look for food in the area.</li>
-            <li><strong>Built for larger orders:</strong> separate pages for offices and film crews, not just single meals.</li>
+            <li>Local guide pages help people nearby find the kitchen when they search for food in the area.</li>
+            <li>Offices and film crews have their own pages for larger orders.</li>
           </ul>
           <p class="stack">Next.js · Vercel · AI-assisted development with Antigravity CLI</p>
-          <p class="links"><a href="https://www.dumbiryanirasoi.in">Visit dumbiryanirasoi.in →</a></p>
+          <p class="links"><a href="https://www.dumbiryanirasoi.in">Visit dumbiryanirasoi.in</a></p>
         </div>
         <div class="case-visual">
           <figure class="browser">
@@ -186,10 +184,10 @@
         <h2>How I build automation a business can trust.</h2>
       </header>
       <ol class="principles reveal">
-        <li><span>01</span><h3>Start from the business, not the model</h3><p>I've managed 60+ client accounts and run operations day to day. I automate the step that actually costs time, then work out which model fits.</p></li>
-        <li><span>02</span><h3>Use AI only where judgement is needed</h3><p>Searching, scraping and saving are ordinary code. They're cheaper, faster and easier to debug, and they leave the model to decide and write.</p></li>
-        <li><span>03</span><h3>Put guardrails in before scale</h3><p>Validated outputs, checks for invented facts, and a clean skip when evidence is thin. A wrong email to a real client costs more than no email.</p></li>
-        <li><span>04</span><h3>Measure, then choose</h3><p>Models are compared on identical inputs for quality, speed and cost, and the result is written down where the next person can see it.</p></li>
+        <li><span>01</span><h3>Start from the business</h3><p>I've managed 60+ client accounts and run operations day to day. I automate the step that costs the most time, then work out which model fits.</p></li>
+        <li><span>02</span><h3>Use AI where judgement is needed</h3><p>Searching, scraping and saving are ordinary code, which is cheaper, faster and easier to debug. The model decides and writes.</p></li>
+        <li><span>03</span><h3>Add checks before scaling up</h3><p>Outputs are validated, drafts are checked for invented facts, and a prospect is skipped when the evidence is thin. A wrong email to a real client costs more than no email.</p></li>
+        <li><span>04</span><h3>Measure, then choose</h3><p>I compare models on the same inputs for quality, speed and cost, and write the result down where the next person can see it.</p></li>
       </ol>
     </div>
   </section>
@@ -199,7 +197,7 @@
     <div class="wrap bg-grid">
       <header class="section-head reveal">
         <p class="eyebrow">Background</p>
-        <h2>Before I wrote agents, I did the work they help with.</h2>
+        <h2>I did the work these agents help with for ten years first.</h2>
         <p class="edu">MSc International Business Management, National College of Ireland (2021)<br>BCA, Atharva Institute of Information Technology (2016)</p>
       </header>
       <ol class="timeline reveal">
@@ -234,7 +232,7 @@
     <div class="wrap reveal">
       <p class="eyebrow">Contact</p>
       <h2>Hiring for AI automation or solutions work?</h2>
-      <p class="lede">I'm looking for a role in Mumbai or remote, building agents a business actually relies on. The fastest way to reach me is LinkedIn.</p>
+      <p class="lede">I'm looking for a role in Mumbai or remote, building agents that a business relies on. LinkedIn is the fastest way to reach me.</p>
       <div class="actions">
         <a class="btn btn-primary" href="https://www.linkedin.com/in/akshay-tambe">Message me on LinkedIn</a>
         <a class="btn btn-ghost-light" href="https://github.com/At0591">GitHub</a>
