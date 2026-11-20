@@ -292,3 +292,19 @@ p { margin: 0 0 1rem; }
 
 /* KindRise logo tile in the work section */
 .case-visual img.logo-tile { width: 100%; max-width: 420px; height: auto; aspect-ratio: 1 / 1; object-fit: contain; border-radius: 24px; margin: 0 auto; display: block; }
+
+/* Live badge, phone screenshot and result cards (20 Nov 2026) */
+.badge-live { display: inline-flex; align-items: center; gap: .35rem; margin-right: .5rem; padding: .15rem .55rem; border-radius: 999px; background: #e3efe6; color: var(--ok); font: 600 .72rem var(--mono); letter-spacing: .04em; text-transform: uppercase; }
+.badge-live::before { content: ""; width: .45rem; height: .45rem; border-radius: 50%; background: var(--ok); }
+.phone-shot { margin: 0 auto; max-width: 340px; padding: 10px; border-radius: 28px; background: var(--ink); box-shadow: var(--shadow); }
+.phone-shot img { width: 100%; height: auto; border-radius: 20px; }
+.result-card { margin: 0; padding: 1.4rem 1.5rem; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.result-title { margin: 0 0 1rem; font: 500 .78rem var(--mono); color: var(--muted); letter-spacing: .04em; }
+.result-card table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.result-card th { text-align: left; font: 500 .74rem var(--mono); color: var(--muted); padding: 0 .6rem .6rem 0; border-bottom: 1px solid var(--line); }
+.result-card td { padding: .7rem .6rem .7rem 0; border-bottom: 1px dashed var(--line); vertical-align: top; color: var(--ink-2); }
+.result-card tr:last-child td { border-bottom: 0; }
+.result-card td:nth-child(2) { font-family: var(--mono); font-size: .88rem; white-space: nowrap; }
+.tag-bad { background: #f6e3dc; color: var(--accent-ink); }
+.links a + a { margin-left: 1.2rem; }
+@media (max-width: 560px) { .result-card { padding: 1.1rem; } .result-card table { font-size: .88rem; } .links a + a { margin-left: 0; display: inline-block; margin-top: .6rem; } }
