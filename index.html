@@ -65,7 +65,7 @@
     <div class="wrap">
       <header class="section-head reveal">
         <p class="eyebrow">Selected work</p>
-        <h2>5 projects, built for businesses I run</h2>
+        <h2>6 projects, built for businesses I run</h2>
       </header>
 
       <!-- 01 Menu assistant -->
@@ -213,6 +213,36 @@
         </div>
         <div class="case-visual">
           <img class="logo-tile" src="assets/kindrise-splash.png" alt="KindRise logo: the words Kind and Rise stacked on a navy background, with a sun rising from the line between them" loading="lazy" width="1024" height="1024">
+        </div>
+      </article>
+
+      <!-- 06 Writing checks -->
+      <article class="case case-flip reveal">
+        <div class="case-copy">
+          <p class="case-num">06 · Evaluation · Nov 2026</p>
+          <h3>Writing checks that found mistakes on my own live sites</h3>
+          <p>This page, my CV and my business websites all pass the same writing checks before I publish them. I wanted to know how good those checks really are. So I built a test of 30 sentences with 1 planted mistake each, and 30 correct sentences taken from my own pages.</p>
+          <ul class="points">
+            <li>House rules in Vale cover British spelling, sentence case, plain words and common signs of AI writing. LanguageTool checks grammar and spelling on my own computer, so no text leaves it.</li>
+            <li>Then an AI model from a different company to the one that helps me draft reads each sentence 3 times and only points out mistakes. It never rewrites anything. A mistake counts when 2 of the 3 readings agree and the quoted words really appear in the text.</li>
+            <li>The model flagged 1 correct sentence from this page: "a kitchen with 13,325 orders since October 2025". The point was fair, so I rewrote the line on the site. The test sentence stayed the same, so the score stays honest.</li>
+            <li>A new check for page titles, buttons and form labels found 6 title-case slips on pixelpolish.art, which are now fixed.</li>
+          </ul>
+          <p class="stack">Python · Vale · LanguageTool · OpenRouter · OpenAI gpt-6-luna</p>
+        </div>
+        <div class="case-visual">
+          <figure class="result-card">
+            <p class="result-title">Test runs on 20 Nov 2026</p>
+            <table>
+              <thead><tr><th scope="col">Checks</th><th scope="col">Mistakes caught</th><th scope="col">Correct sentences flagged</th></tr></thead>
+              <tbody>
+                <tr><td>Vale and LanguageTool</td><td>27 of 30</td><td>0 of 30</td></tr>
+                <tr><td>With the AI proofreader, run 1</td><td>29 of 30</td><td>1 of 30</td></tr>
+                <tr><td>With the AI proofreader, run 2</td><td>30 of 30</td><td>1 of 30</td></tr>
+              </tbody>
+            </table>
+          </figure>
+          <p class="caption">The rules missed 3 grammar mistakes, such as "60 account". The AI proofreader caught all 3 in run 2 and 2 of them in run 1. I wrote the 60 test sentences myself. They show that the checks work on my kind of writing, not on all writing.</p>
         </div>
       </article>
     </div>
